@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <getopt.h>
-#include "caeser.h"
+#include "caesar.h"
 
 int main(int argc, char** argv) {
     char* input_filename = NULL;
@@ -56,7 +56,7 @@ int main(int argc, char** argv) {
         }
     }
 
-    caeser_cipher(input_file, output_file, shift);
+    caesar_cipher(input_file, output_file, shift);
 
     fclose(input_file);
     fclose(output_file);

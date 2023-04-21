@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -pedantic
-OBJ = src/main.o src/caeser.o
+OBJ = src/main.o src/caesar.o
 EXECUTABLE = caesar
 
 all: $(EXECUTABLE)
@@ -8,11 +8,11 @@ all: $(EXECUTABLE)
 $(EXECUTABLE): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(EXECUTABLE)
 
-src/main.o: src/main.c src/caeser.h
+src/main.o: src/main.c src/caesar.h
 	$(CC) $(CFLAGS) -c src/main.c -o src/main.o
 
-src/caeser.o: src/caeser.c src/caeser.h
-	$(CC) $(CFLAGS) -c src/caeser.c -o src/caeser.o
+src/caesar.o: src/caesar.c src/caesar.h
+	$(CC) $(CFLAGS) -c src/caesar.c -o src/caesar.o
 
 clean:
 	rm -f $(OBJ) $(EXECUTABLE)

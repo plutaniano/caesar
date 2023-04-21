@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "caeser.h"
+#include "caesar.h"
 
-int caeser_cipher(FILE* input_file, FILE* output_file, int shift) {
+int caesar_cipher(FILE* input_file, FILE* output_file, int shift) {
     int c;
 
     while ((c = fgetc(input_file)) != EOF) {

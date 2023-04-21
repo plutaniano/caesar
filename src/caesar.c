@@ -3,6 +3,7 @@
 #include "caesar.h"
 
 int caesar_cipher(FILE* input_file, FILE* output_file, int shift) {
+    shift = (shift % 26) + 26; // Negative shift support e.g. turns -1 into 25
     int c;
 
     while ((c = fgetc(input_file)) != EOF) {

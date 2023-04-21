@@ -26,4 +26,8 @@ fbzr jbeqf
 # The program ignores non-ascii letters
 $ echo "ABC +-/ abc" | ./caesar
 NOP +-/ nop
+
+# To reverse an operation use negative shift
+$ echo "some phrase" | ./caesar -s 10 | ./caesar -s -10
+some phrase
 ```
